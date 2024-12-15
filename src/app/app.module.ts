@@ -12,12 +12,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './myComponents/dashboard/dashboard.component';
 import { MatCardModule } from '@angular/material/card';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { DocsDialogComponent } from './myComponents/docs-dialog/docs-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    DocsDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { MatCardModule } from '@angular/material/card';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
+    MatDialogModule
   ],
   providers: [
     provideClientHydration(withEventReplay()),
