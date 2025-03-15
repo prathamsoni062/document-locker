@@ -13,12 +13,34 @@ export class DashboardComponent {
 constructor(private dialog: MatDialog){
 }
 
-openDialog() {
+cards = [
+  {
+    title: 'Aadhaar',
+    description: 'Unique identification card issued by the government.'
+  },
+  {
+    title: 'PAN',
+    description: 'Permanent Account Number for tax identification.'
+  },
+  {
+    title: 'Voter ID',
+    description: 'Identity card for voting purposes.'
+  },
+  {
+    title: 'Driving License',
+    description: 'Document permitting you to drive vehicles.'
+  }
+];
+
+
+
+openDialog(card: any) {
   this.dialog.open(DocsDialogComponent, {
     width: '400px', // Adjust the width as needed
     data: {
-      animal: 'panda',
-    },
+      documentType: card.title, // Pass the card's title to the dialog
+      description: card.description
+    }
   });
 }
 }

@@ -1,21 +1,11 @@
-<h2 mat-dialog-title>Favorite Animal</h2>
+<h2 mat-dialog-title>{{ data.documentType }}</h2>
 <mat-dialog-content>
-  My favorite animal is:
-  <ul>
-    <li>
-      @if (data.animal === 'panda') {
-        <span>&#10003;</span>
-      } Panda
-    </li>
-    <li>
-      @if (data.animal === 'unicorn') {
-        <span>&#10003;</span>
-      } Unicorn
-    </li>
-    <li>
-      @if (data.animal === 'lion') {
-        <span>&#10003;</span>
-      } Lion
-    </li>
-  </ul>
+  <!-- <pdf-viewer
+    [src]="src/app/myComponents/file.pdf"
+    
+    style="display: block; height: 500px;"
+  ></pdf-viewer> -->
 </mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

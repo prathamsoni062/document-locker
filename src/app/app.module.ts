@@ -14,6 +14,7 @@ import { DashboardComponent } from './myComponents/dashboard/dashboard.component
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DocsDialogComponent } from './myComponents/docs-dialog/docs-dialog.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { DocsDialogComponent } from './myComponents/docs-dialog/docs-dialog.comp
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    PdfViewerModule
   ],
   providers: [
     provideClientHydration(withEventReplay()),
